@@ -1,4 +1,4 @@
-export { copy, move, expandGlob, readFileStr } from 'https://deno.land/std@v0.36.0/fs/mod.ts'
+export { copy, move, expandGlob, readFileStr, writeFileStr } from 'https://deno.land/std@v0.36.0/fs/mod.ts'
 export { TextProtoReader } from 'https://deno.land/std@v0.36.0/textproto/mod.ts'
 export { BufReader } from 'https://deno.land/std@v0.36.0/io/bufio.ts'
 export { join } from 'https://deno.land/std@v0.36.0/path/mod.ts'
