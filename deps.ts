@@ -1,7 +1,6 @@
-export { copy, move, expandGlob, readFileStr, writeFileStr } from 'https://deno.land/std@v0.36.0/fs/mod.ts'
-export { TextProtoReader } from 'https://deno.land/std@v0.36.0/textproto/mod.ts'
-export { BufReader } from 'https://deno.land/std@v0.36.0/io/bufio.ts'
-export { join } from 'https://deno.land/std@v0.36.0/path/mod.ts'
-import * as path from 'https://deno.land/std@v0.36.0/path/mod.ts'
-import * as fmt from 'https://deno.land/std@v0.36.0/fmt/mod.ts'
-export { fmt, path }
+export { copy, move, expandGlob, readFileStr, writeFileStr } from 'https://deno.land/std@v0.42.0/fs/mod.ts'
+export { TextProtoReader } from 'https://deno.land/std@v0.42.0/textproto/mod.ts'
+export { BufReader } from 'https://deno.land/std@v0.42.0/io/bufio.ts'
+export { join } from 'https://deno.land/std@v0.42.0/path/mod.ts'
+export * as path from 'https://deno.land/std@v0.42.0/path/mod.ts'
+export * as fmt from 'https://deno.land/std@v0.42.0/fmt/mod.ts'
