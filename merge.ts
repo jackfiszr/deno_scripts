@@ -23,12 +23,12 @@ async function mergePdfs(pdfsToMerge: string[]) {
   for (const pdfPath of pdfsToMerge) {
     const pdfBytes = Deno.readFileSync(pdfPath)
     const pdfDoc = await PDFDocument.load(pdfBytes)
-    if (pdfDoc.getPageCount() === 2) {
+    // if (pdfDoc.getPageCount() === 2) {
       const copiedPages = await mergedPdf.copyPages(pdfDoc, pdfDoc.getPageIndices())
       copiedPages.forEach((page: PDFPage) => {
         mergedPdf.addPage(page)
       })
-    }
+    // }
   }
   const mergedPdfFile = await mergedPdf.save()
   return mergedPdfFile

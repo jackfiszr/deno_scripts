@@ -9,9 +9,9 @@ async function splitPdfEveryTwoPages (sourceFilePath: string, outputDirPath: str
   try {
     sourceFile = await PDFDocument.load(Deno.readFileSync(sourceFilePath))
     const byteArrays: Uint8Array[] = sourceFile.getPages().map(async (_: any, i: number) => {
-      if (i % 2 == 0) {
+      // if (i % 2 == 0) {
         const doc = await PDFDocument.create()
-        const pages = await doc.copyPages(sourceFile, [i, i + 1])
+        const pages = await doc.copyPages(sourceFile, [i]) // , i + 1])
         pages.forEach((page: PDFPage) => {
           // const { width, height } = page.getSize()
           // const rotationAngle = page.getRotation().angle
@@ -21,8 +21,8 @@ async function splitPdfEveryTwoPages (sourceFilePath: string, outputDirPath: str
           doc.addPage(page)
         })
         return await doc.save()
-      }
-    }).filter((p: PDFPage, i: number) => i % 2 === 0)
+      // }
+    }) // .filter((p: PDFPage, i: number) => i % 2 === 0)
     log({
       color: 'yellow',
       title: 'DZIELENIE',
